@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Event Details</h1>
+        <a href="index.html" class="home-link">🏠 Back to Home</a>
+    </header>
+
+    <section id="event-info">
+        <h2>Loading Event Details...</h2>
+    </section>
+
+    <script>
+       
+        const params = new URLSearchParams(window.location.search);
+        const eventId = params.get("id");
+
+        const eventData = {
+            "ai-workshop": {
+                title: "AI Workshop",
+                date: "Feb 10, 2025",
+                description: "Explore the world of AI and Machine Learning in this exciting workshop."
+            },
+            "football-tournament": {
+                title: "Football Tournament",
+                date: "March 15, 2025",
+                description: "Join the inter-college football championship and showcase your talent."
+            },
+            "research-paper": {
+                title: "Research Paper Submission",
+                date: "April 5, 2025",
+                description: "Submit your research paper for publication in the university journal."
+            }
+        };
+
+        const eventInfo = eventData[eventId];
+
+        if (eventInfo) {
+            document.getElementById("event-info").innerHTML = `
+                <h2>${eventInfo.title}</h2>
+                <p><strong>Date:</strong> ${eventInfo.date}</p>
+                <p>${eventInfo.description}</p>
+                <button class="join-btn">Register Now</button>
+            `;
+        } else {
+            document.getElementById("event-info").innerHTML = `<h2>Event Not Found</h2>`;
+        }
+    </script>
+</body>
+</html>
