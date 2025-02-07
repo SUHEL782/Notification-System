@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with university events, workshops, and academic announcements.">
+    <meta name="keywords" content="university, events, notifications, workshops, AI, sports">
+    <meta name="author" content="Your University">
+    <title>University Events & Notifications</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>University Event Notifications</h1>
+    </header>
+
+    <!-- Navigation & Dark Mode -->
+    <nav>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </nav>
+
+    <main>
+        <!-- Filter Section -->
+        <section class="filters">
+            <label for="eventFilter">Filter Events:</label>
+            <select id="eventFilter" onchange="filterEvents()">
+                <option value="all">All</option>
+                <option value="workshops">Workshops</option>
+                <option value="sports">Sports</option>
+                <option value="academic">Academic</option>
+            </select>
+        </section>
+
+        <!-- Notification List -->
+        <section id="notification-list">
+            <!-- Workshop Notification -->
+            <div class="notification workshop">
+                <h3>Workshop on AI</h3>
+                <p><strong>Date:</strong> Feb 10, 2025</p>
+                <p>Join this AI workshop to explore machine learning techniques.</p>
+                <button class="join-btn" onclick="redirectToEvent('ai-workshop')">Join Now</button>
+            </div>
+
+            <!-- Sports Notification -->
+            <div class="notification sports">
+                <h3>Football Tournament</h3>
+                <p><strong>Date:</strong> March 15, 2025</p>
+                <p>Register now for the inter-college football tournament!</p>
+                <button class="join-btn" onclick="redirectToEvent('football-tournament')">Join Now</button>
+            </div>
+
+            <!-- Academic Notification -->
+            <div class="notification academic">
+                <h3>Research Paper Submission</h3>
+                <p><strong>Deadline:</strong> April 5, 2025</p>
+                <p>Submit your research paper for publication.</p>
+                <button class="join-btn" onclick="redirectToEvent('research-paper')">Submit</button>
+            </div></section>
+    </main>
+   <aside>
+        
+        <div class="auth-links">
+            <a href="login.html">Login</a> | <a href="signup.html">Sign Up</a>
+        </div>
+
+        <!-- Chatbot Floating Button -->
+        <div id="chatbot-container">
+            <button id="chatbot-toggle">💬 Chat</button>
+            <div id="chatbot-box">
+                <div id="chat-header">
+                    <span>AI Assistant</span>
+                    <button id="chat-close">✖</button>
+                </div>
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Ask me about events..." />
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
