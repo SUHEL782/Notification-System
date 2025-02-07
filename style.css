@@ -1,0 +1,323 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s ease;
+    line-height: 1.6;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    padding: 15px 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Links */
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Filters */
+.filters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #45a049;
+}
+
+/* Notification Section */
+#notification-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.notification {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode .notification {
+    background-color: #333;
+}
+
+.notification:hover {
+    transform: translateY(-5px);
+}
+
+.notification h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.notification p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.join-btn, .dark-mode-toggle, .btn-send-notification, button, .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .join-btn:hover, .dark-mode-toggle:hover, .btn-send-notification:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:disabled, .btn-send-notification:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Chatbot Styles */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chatbot-box {
+    display: none;
+    width: 300px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#chatbot-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#chatbot-box input, #chatbot-box button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Admin Dashboard Styles */
+body.admin-dashboard {
+    background-color: #e9ecef;
+}
+
+header.admin-dashboard {
+    background-color: #218838;
+    padding: 15px 30px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Admin Events & Notifications */
+#admin-events, #admin-notifications {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Event Form */
+#add-event-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #218838;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Improved Form Styles */
+input, textarea, select {
+    font-size: 1.1rem;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(72, 155, 87, 0.5);
+}
+
+/* Auth Container for Signup / Login */
+body.auth-container {
+    background: linear-gradient(135deg, #00bcd4, #8e44ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+button.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Adding Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .notification {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .filter-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .auth-container {
+        padding: 30px;
+        width: 90%;
+    }
+}
+.hidden {
+    display: none;
+}
+
